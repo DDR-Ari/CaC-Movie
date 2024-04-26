@@ -1,0 +1,878 @@
+*:not(input){  
+    margin:0;
+    padding:0;
+    font-family:'Nunito', Arial, Helvetica, sans-serif;
+
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+  }
+
+::-webkit-scrollbar-track {
+    background: rgb(24,20,25);
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background:rgb(159,54,71); 
+    border-radius: 5px;
+  }
+
+body{
+    background-color:rgb(24,20,25);
+    color:rgb(255,255,255);
+}
+
+/* estilos del header */
+.header{
+    background-color:rgb(159,54,71);
+    color:rgb(255,255,255);
+    margin-top:0;
+    height:10vh;
+    position:sticky;
+    z-index:999; 
+}
+.barraNaveg{
+    display:flex;
+    align-items:center;
+    justify-content: space-between;
+    margin-right: 2.4em;   
+    padding-top:1.2em;
+}
+
+.navDerecha{
+    display: flex;  
+    list-style: none;
+    align-items: center;
+}
+.lista{
+    margin-right:1.5em;
+}
+.botonNav{
+    color:white;
+    font-size:1.2em;
+    text-decoration:none;
+    padding: 0.4em 1em;
+    outline: none;
+    transition: box-shadow 0.2s ease-in-out, transform 0.2s ease-in-out;
+}
+.botonNav:hover {
+    text-decoration:none;
+    color:white;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    border-radius: 4px;
+}
+
+.logo {
+    color:white;
+    font-size:1.5em;    
+    text-decoration: none;
+    font-weight: bold;
+    margin-left:1em;
+}
+.logo:hover{
+    text-decoration:none;
+    color:white;
+    animation: swing infinite;
+    animation-duration: 0.6s;
+    animation-delay:6ms;
+}
+
+.botonNav.Inicio{
+    color:white;
+    background-color:rgb(24,20,25);
+    transition: box-shadow 0.2s ease-in-out, transform 0.2s ease-in-out;
+    border-radius: 4px;
+}
+.botonNav.Inicio:hover {
+    background-color:rgb(159,54,71);
+}
+
+@media (max-width: 768px) {
+
+    .header{
+        height:initial;
+    }
+    .barraNaveg{
+        flex-direction: column;
+        margin-right: 1em;   
+        margin-left:1em;
+        padding-top: 1em;
+        padding-bottom:1em;
+    }
+    
+    .botonNav{
+        font-size:0.86em;
+    }
+
+    .logo {
+        font-size:1em;    
+        margin-bottom:20px;
+    }
+    
+}
+
+
+/* estilos para el main de pagina principal */
+.main{
+    .seccionP{
+         background:linear-gradient(45deg, rgba(6, 5, 15, 0.561), rgba(3, 1, 3, 0.692)), url(./img/banner-bg.jpg);
+         background-position: center;
+         background-size: cover;
+         color:white;
+         height:90vh;
+         display:flex;
+         flex-direction: column;
+         justify-content: center;
+         text-align: center;
+         align-items: center;
+         animation:zoomIn;
+         animation-duration: 1s; 
+        }  
+}
+
+.tituloPagina{
+    font-size: 4em;
+}
+.subtitulo{
+    font-size: 2em;
+    font-weight: 300;
+}
+.botonRegistro{
+
+    padding: 0.4em 1em;
+    background-color:rgb(159,54,71);
+    border-radius: 4px;
+    margin-top: 3em;
+    transition: box-shadow 0.2s ease-in-out, transform 0.2s ease-in-out;
+    a{
+        font-size: 1.6em;
+        text-decoration:none;
+        color:white;
+        &:hover{
+            text-decoration: none;
+            color: white;
+        }
+    }
+}
+.botonRegistro:hover {
+    transform: scale(0.95);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.771);
+}
+
+.sectionB{
+    color:white;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height:60vh;
+    animation:fadeInUp;
+    animation-duration: 3s; 
+    animation-delay: 10ms; 
+    .tituloBuscador{
+        font-size:3em;
+        font-weight: 600;
+    }
+    .buscadorPeli{
+        margin-top: 1em;
+        display:flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .inputB{
+        width:550px;
+        border: solid white 4px;
+        border-radius: 20px;
+        height: 30px;
+        padding: 0px 20px;
+        font-size:1em;
+        margin-top:20px;
+    }
+    
+    .botonB{
+        color:white;
+        background-color:rgb(159,54,71);
+        width:90px;
+        height:40px;
+        padding: 0px 20px;
+        border:solid white 2px;
+        border-radius: 20px;
+        font-size:1em;
+        font-weight: 500;
+        margin-top:20px;
+        margin-left:20px;
+        transition: box-shadow 0.2s ease-in-out, transform 0.2s ease-in-out;
+    }
+    .botonB:hover{
+        transform: scale(0.95);
+        box-shadow: 0 0 10px rgba(255, 255, 255, 0.771);
+    }
+}
+
+.trendingMovies{
+    text-align: center;
+    width:80%;
+    margin: 2em auto;
+    animation:fadeInUp;
+    animation-duration: 2s; 
+    animation-delay: 10ms; 
+
+    .tendencia{
+        font-size:2.4em;
+        font-weight: 600;
+    }
+    .peliculas{
+        display:flex;
+        flex-wrap:wrap;
+        align-content: center;
+        justify-content: center;
+        gap:50px;
+        margin-top:20px;
+        margin-bottom: 20px;
+        a {
+            color:white;
+            text-decoration: none;
+            .pelicula{
+                position:relative;
+                width:200px;
+                height:300px;
+                border-radius: 5px;
+                transition: all 0.5s ease;
+                overflow:hidden;
+                .imgPeli{
+                    object-fit: cover;
+                    border-radius: 5px;
+                    width: 100%;
+                    height: 100%;
+                    }
+                }
+            
+                .tituloPelicula{
+                text-align: center;
+                position:absolute;
+                top:50%;
+                left:50%;
+                max-width: 10em;
+                width: 100%;
+                transform: translateY(-50%) translateX(-50%);
+                h4{
+                    font-size:2em;
+                    font-weight: 400;
+                    opacity: 0;
+                    transition: opacity 0.5s ease-in-out;
+                }
+            }
+            &:hover{
+                box-shadow: 0 0 30px #9f3648cd;
+                transform: scale(0.96) ; 
+                
+            }
+            &:hover h4{
+                opacity: 1;
+               
+            }
+            a:hover::before{
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 50%;
+                height: 50%;
+                border-radius: 10px;
+                background-color: #9f364867;
+             }
+             &:hover .imgPeli {
+                filter: blur(8px);
+            }
+             }
+         }
+    }
+
+
+
+.separador{
+    width:60%;
+    border:1px solid rgb(159,54,71);
+    margin: 0 auto;
+}
+
+
+.masAclamadas{
+    text-align: center;
+    width:80%;
+    margin: 2em auto;
+    animation:fadeInUp;
+    animation-duration: 2s; 
+    animation-delay: 10ms; 
+    .tituloAclamado{
+        font-size:3em;
+        font-weight:bold;
+    }
+    .aclamada{
+        width:100%;
+        display:flex;
+        align-items: flex-start;
+        margin:1.4em 0;
+        overflow: scroll hidden;
+        .peliAclamada{
+            width: 180px;
+            min-width: 170px;
+            display:flex;
+            flex-direction: column;
+            justify-content:space-evenly;
+            padding: 2em 0.2em;
+            .caratulaAclamada{
+                width: 90%;
+                height:90%;
+                border-radius: 10px;
+            }
+        }
+
+    }
+
+
+}
+
+
+
+@media (max-width: 768px) {
+    .main{
+        .seccionP{
+             height:70vh;
+            .tituloPagina{
+                font-size: 3em;
+             }
+             .subtitulo{
+                 font-size: 1.6em;
+                 }
+             .botonRegistro{
+                 margin-top: 2em;
+                 a{
+                     font-size: 1.4em;
+                    }
+                }
+            }
+         .sectionB{
+            height:40vh;
+         .tituloBuscador{
+            font-size:1.4em;
+            font-weight: 400;
+        }
+         .buscadorPeli{
+            width:340px;
+            height:20px;
+        }
+
+        .botonB{
+            height:35px;
+            margin-left:10px;
+        }
+    }
+    
+    .trendingMovies{
+        width:90%;
+        .tendencia{
+            font-size:1.6em;
+        }
+        .peliculas{
+            display:flex;
+            flex-direction: column;
+            gap:30px;
+            a { 
+                .pelicula{
+                    position:relative;
+                    width:100%;
+                    height:460px;
+                    .imgPeli{
+                        object-fit: cover;
+                        border-radius: 5px;
+                        width: 100%;
+                        height: 100%;
+                        }
+                    }
+                
+                    .tituloPelicula{
+                    h4{
+                        font-size:1em;
+                    }
+                }
+                }
+             }
+        }
+    .masAclamadas{
+        .tituloAclamado{
+            font-size:2em;
+        }
+    }
+}
+}
+
+
+/* footer del footer */
+
+.footer {
+    background-color: rgb(159, 54, 71);
+    color: rgb(255, 255, 255);
+    width:100%;
+    margin-bottom: 0;
+    height: 16vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration:none !important;
+}
+
+.barrafoot {
+    display: flex;
+    align-items: center;
+    list-style: none;
+}
+
+.listaF {
+    margin-left:1em;
+    margin-bottom: 30px;
+}
+
+.linkF {
+    color:white;
+    font-size:1em;
+    text-decoration:none ;
+    padding: 0.4em 1em;
+    &:hover{
+        text-decoration: none;
+        color:white;
+    }
+}
+
+.linkF.admPel  {
+    color:white;
+    background-color: rgb(24, 20, 25);
+    border-radius: 4px;
+}
+
+.flechaInicio{
+    bottom:20px;
+    right:20px;
+    position:fixed;
+}
+.flechaInicio img {
+    filter: drop-shadow(0px 1000px 0 rgb(255, 255, 255));
+    transform: translateY(-1000px);
+}
+
+/* footer */
+@media (max-width: 768px) {
+    .footer{
+        height:21vh;
+    }
+
+    .barrafoot {
+        height:initial;
+        flex-direction: column;
+        padding:20px 0;
+
+    }
+
+    .listaF {
+        margin-top: 1em;
+        margin-bottom: 40px;
+    }
+
+    .linkF {
+        margin:10px;
+        font-size: 1em;
+        padding: 0.3em 0.8em;
+    }
+
+    .linkF.admPel {
+        padding: 0.05em 0.4em;
+    }
+    
+
+}
+
+/* estilos para la pagina inicio de sesion*/
+
+.bodyLogin{
+    background-image:radial-gradient(rgba(0, 0, 0, 0.516), rgba(0, 0, 0, 0.557)),url(./img/bg-register.jpg);
+    height:95vh;
+    .loginHeader{
+        margin-top:20px;
+        height:10vh;
+    .logoCaC{   
+        text-decoration: none;
+        font-weight: bold;
+        font-size:1.5em; 
+        margin-left:1em;
+        margin-top: 3em;
+        &:visited{
+            text-decoration: none;
+            color:white;
+        }
+    }
+    }
+    .mainInicio{
+        .seccionInicio{
+            display:flex;
+            flex-direction: column;
+            background-color:rgb(24,20,25);
+            justify-content: center;
+            align-items: center;
+            height: 85vh;
+            width:30%;
+            margin:0 auto;
+            form{
+                width:90%;
+                .tituloLogin{
+                    font-size:2em;
+                    padding:20px 0;
+                }
+                input:not(.botonI){
+                    color: white;
+                    width:90%;
+                    height:40px;
+                    margin:15px 0;
+                    padding:0 10px;
+                    border-radius: 35px;
+                    border:3px solid rgb(159, 54, 71);
+                    background-color:rgb(42, 37, 44); ;
+                }    
+                .botonI{
+                    width:85%;
+                    padding:20px;
+                    color:white;
+                    margin: 2px auto;
+                    border:2px solid  rgb(159, 54, 71);
+                    background-color: rgb(159, 54, 71);
+                    font-size:1em;
+                    border-radius: 10px;
+
+                }
+                .noRegistrado{
+                    text-decoration: none;
+                    color:grey;
+                }
+
+
+        }
+    }}
+}
+
+@media (max-width: 1200px) {
+    body, html { 
+        overflow-x: hidden; 
+        overflow-y: auto;
+    }
+    .bodyLogin{
+        height: 100vh;
+        .loginHeader{
+            padding:30x;
+        .logoCaC{   
+            margin-left:25px;
+            font-size:1em; 
+        }
+        }
+        .mainInicio{
+            
+            .seccionInicio{
+                width:90%;
+
+
+
+                margin:0 auto;
+                form{
+                    width:95%;
+                    text-align: center;
+                    .tituloLogin{
+                        font-size:2em;
+                        padding:20px 0;
+                    }
+                    input:not(.botonI){
+                        width:60%;
+                        height:40px;
+                    }    
+                    .botonI{
+                        width:60%;
+                        padding:20px;
+                        margin: 20px 0;
+                        font-size:1.2em;
+                    }
+    
+    
+            }
+        }}
+    }}
+
+
+/* estilos para pagina de registro*/
+
+
+.bodyRegistro{
+    background-image:radial-gradient(rgba(0, 0, 0, 0.516), rgba(0, 0, 0, 0.557)),url(./img/bg-register.jpg);
+    height:95vh;
+    .headerRegistro{
+        margin-top:20px;
+        height:10vh;
+    .logoInicio{   
+        text-decoration: none;
+        font-weight: bold;
+        font-size:1.5em; 
+        margin-left:1em;
+        margin-top: 3em;
+        &:visited{
+            text-decoration: none;
+            color:white;
+        }
+    }
+    }
+    .mainRegistro{
+        .boxRegistro{
+            display:flex;
+            flex-direction: column;
+            background-color:rgb(24,20,25);
+            justify-content: center;
+            align-items: center;
+            height: 85vh;
+            width:30%;
+            margin:0 auto;
+            form{
+                .tituloRegistro{
+                    font-size:2em;
+                    padding:20px 0;
+                }
+                 input:not(.check,.boton), select{
+                    color: white;
+                    width:90%;
+                    height:40px;
+                    margin:15px 0;
+                    padding:0 10px;
+                    border-radius: 35px;
+                    border:3px solid rgb(159, 54, 71);
+                    background-color:rgb(42, 37, 44); ;
+                }    
+                select{
+                    width:95%;
+                    height:45px;
+
+                }
+                .textCheck{
+                    margin-left: 2px;   
+                }
+                }
+                    
+                }
+                .boton{
+                    width:85%;
+                    padding:20px;
+                    color:white;
+                    margin: 2px auto;
+                    border:2px solid  rgb(159, 54, 71);
+                    background-color: rgb(159, 54, 71);
+                    font-size:1em;
+                    border-radius: 10px;
+
+                }
+                .help{
+                    text-decoration: none;
+                    color:grey;
+
+                }
+
+        }
+    }
+
+@media (max-width: 1200px) {
+body, html { 
+    overflow-x: hidden; 
+    overflow-y: auto;
+    }
+.bodyRegistro{
+    .headerRegistro{
+        padding:10px;
+        height:5vh;
+    .logoInicio{   
+         margin-left:10px;
+         font-size:1em;
+        }
+    }
+    
+    .mainRegistro{
+        .boxRegistro{
+            width:90%;
+            height: 95vh;
+            form:not(.check){
+                width:70%;
+                .tituloRegistro{
+                    text-align:center;
+                }
+                 input:not(.check,.boton), select{
+                    width:90%;
+                    height:40px;
+                    margin:15px 0;
+                    padding:0 10px;
+                    border-radius: 35px;
+                    text-align:center;
+                }    
+                select{
+                    width:95%;
+                    height:45px;
+
+                }
+
+                .boton{
+                    width:75%;
+                    padding:15x;
+                }
+
+
+        }
+    }}
+}
+}
+
+
+
+/* estilos para pagina descripcion de pelicula*/
+
+.mainDesc{
+    .descripcion{      
+         background:radial-gradient(rgba(108, 106, 108, 0.77), rgba(27, 14, 14, 0.605)),url(./img/mario-bg.jpg);
+         height:60vh;
+         padding-top: 10vh;
+         background-size: cover;
+         background-position: center;
+         animation:zoomIn;
+         animation-duration: 2s; 
+        .infoDesc{
+            display:flex;
+            align-items: center;
+            justify-content: center;
+            width:70%;
+            margin:0 auto;
+        }
+        .imgMario{
+            border-radius: 30px;
+            margin:0 40px;
+        }
+
+        h1{
+            font-size:3em;
+            font-weight:600;
+        }
+        h2{
+            margin:5px 0;
+
+        }
+
+        p{
+            margin-top:0;
+            font-size:1.2em;
+        }
+        .creditos{
+            display:flex;
+            margin-top: 30px;
+            justify-content: space-between;
+            font-size:1.3em;
+        }
+        }
+
+    }
+
+    .seccionTrailer{
+         display:flex;
+         width: 70%;
+         margin: 100px auto;
+         justify-content: space-between;
+         align-items: center;
+         animation:slideInLeft;
+         animation-duration: 2s; 
+         animation-delay: 10ms; 
+         ul{
+            padding-top:20px;
+            display:flex;
+            list-style: none;
+            column-gap: 40px;
+            a{
+                text-decoration: none;
+                color:white;
+                font-size:3em;
+            }
+         }
+         .movieInfo{
+             .tablaInfo{
+                width:115%;
+                tr{
+                    
+                    td{
+                        font-size: 1em;
+                        padding: 10px 10px;
+                    }
+                }
+             }
+         }
+    }
+    @media screen and (max-width:1200px){
+        .mainDesc{
+            .descripcion{      
+                 height:auto;
+                 margin:0 auto;
+                .infoDesc{
+                 flex-direction:column;
+                }
+                .imgMario{
+                    border-radius: 30px;
+                    margin:10px 40px;
+                }
+        
+                h1{
+                    font-size:1.2em;
+                }
+        
+                p{
+                    font-size:1em;
+                }
+                .creditos{
+                    flex-direction:column;
+                    padding-bottom: 10px;
+                }
+                }
+        
+            }
+        
+            .seccionTrailer{
+                 width: 95%;
+                 margin:10px;
+                 flex-direction:column;
+                 align-items:initial;
+                 .trailer{
+                    iframe{
+                        width:100%;
+                        padding:6px auto;
+                        height:400px;
+                    }
+                 }
+                 ul{
+                    display:flex;
+                    width:100%;
+                    justify-content: space-between;
+                    align-items: center;
+                    a{
+                        font-size:2em;
+                    }
+                 }
+                 .movieInfo{
+                     .tablaInfo{
+                        display:flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: center;
+                        width:100%;
+                        tr{
+                            td,th{
+                                font-size: 1em;
+                            }
+                        }
+                     }
+                 }
+            }
+    }
